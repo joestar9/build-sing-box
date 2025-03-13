@@ -55,30 +55,6 @@ jobs:
             goos: linux
             goarch: amd64
             goamd64: v3
-          - name: linux-arm64
-            goos: linux
-            goarch: arm64
-          - name: linux-armv5
-            goos: linux
-            goarch: arm
-            goarm: 5
-          - name: linux-armv6
-            goos: linux
-            goarch: arm
-            goarm: 6
-          - name: linux-armv7
-            goos: linux
-            goarch: arm
-            goarm: 7
-          # windows
-          - name: windows-amd64
-            goos: windows
-            goarch: amd64
-            goamd64: v1
-          - name: windows-amd64-v3
-            goos: windows
-            goarch: amd64
-            goamd64: v3
     runs-on: ubuntu-latest
     env:
       GOOS: ${{ matrix.goos }}
@@ -86,7 +62,7 @@ jobs:
       GOAMD64: ${{ matrix.goamd64 }}
       GOARM: ${{ matrix.goarm }}
       CGO_ENABLED: 0
-      TAGS: with_quic,with_dhcp,with_wireguard,with_clash_api,with_gvisor
+      TAGS: with_quic,with_grpc,with_dhcp,with_wireguard,with_ech,with_utls,with_reality_server,with_acme,with_clash_api,with_v2ray_api,with_gvisor,with_embedded_tor,with_lwip
     steps:
       - name: Checkout
         uses: actions/checkout@v4
