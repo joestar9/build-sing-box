@@ -4,11 +4,6 @@ permissions:
   contents: write
   discussions: write
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
-
 jobs:
   check-tag:
     runs-on: ubuntu-latest
