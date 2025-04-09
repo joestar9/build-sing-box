@@ -4,7 +4,7 @@ A custom statically-linked build of [SagerNet sing-box](https://github.com/Sager
 
 ## Compatibility
 
-only `linux/amd64` And `linux/arm64` are supported.
+only `linux/amd64` and `linux/arm64` are supported.
 
 ## Usage
 
